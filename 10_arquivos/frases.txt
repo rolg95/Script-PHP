@@ -1,0 +1,4 @@
+Aprender exige prática.
+Erros ajudam a investigar o código.
+Um problema grande pode ser dividido em partes menores.
+

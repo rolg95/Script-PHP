@@ -1,0 +1,100 @@
+/* :root representa o elemento principal da página e pode guardar configurações globais. */
+:root {
+    color-scheme: light; /* Informa que a página utiliza um esquema de cores claro. */
+    font-family: Arial, sans-serif; /* Define Arial como fonte principal e uma fonte sem serifa como alternativa. */
+    color: #202124; /* Define a cor padrão dos textos. */
+    background: #f4f6f8; /* Define a cor de fundo geral da página. */
+}
+
+/* O seletor * representa todos os elementos da página. */
+* {
+    box-sizing: border-box; /* Faz padding e borda entrarem no cálculo do tamanho do elemento. */
+}
+
+body {
+    margin: 0; /* Remove a margem padrão que o navegador adiciona ao body. */
+}
+
+/* .container seleciona qualquer elemento que possua class="container". */
+.container {
+    width: min(1100px, 92%); /* Usa 92% da tela, mas limita a largura máxima a 1100px. */
+    margin: 40px auto; /* Adiciona 40px em cima/baixo e centraliza horizontalmente. */
+}
+
+header {
+    margin-bottom: 28px; /* Cria espaço abaixo do cabeçalho. */
+}
+
+h1 {
+    margin: 6px 0; /* Define 6px de margem em cima/baixo e 0 nas laterais. */
+
+    /* clamp() cria um tamanho responsivo: mínimo 2rem, ideal 5vw e máximo 3.5rem. */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Estiliza elementos que possuem class="tag". */
+.tag {
+    color: #005f73; /* Define a cor do texto. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+    text-transform: uppercase; /* Transforma o texto visualmente em letras maiúsculas. */
+    letter-spacing: .08em; /* Aumenta o espaço entre as letras. */
+}
+
+/* Área responsável por organizar os cards. */
+.grade {
+    display: grid; /* Ativa o sistema de layout CSS Grid. */
+
+    /* Cria automaticamente a quantidade de colunas que couber na tela.
+       Cada coluna terá no mínimo 220px e poderá crescer igualmente. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 16px; /* Define o espaço entre os itens da grade. */
+}
+
+/* Estilo principal de cada card. */
+.card {
+    background: #fff; /* Fundo branco. */
+    border: 1px solid #dfe3e6; /* Cria uma borda fina cinza. */
+    border-radius: 14px; /* Arredonda os cantos. */
+    padding: 20px; /* Cria espaço interno entre conteúdo e borda. */
+
+    /* Cria uma sombra leve ao redor do card. */
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .05);
+}
+
+/* Seleciona elementos <span> que estejam dentro de .card. */
+.card span {
+    color: #0a9396; /* Define uma cor de destaque. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+}
+
+/* Seleciona títulos <h2> que estejam dentro dos cards. */
+.card h2 {
+    min-height: 48px; /* Garante uma altura mínima para manter os cards alinhados. */
+    font-size: 1.15rem; /* Define o tamanho do texto em relação à fonte padrão da página. */
+}
+
+/* Seleciona links <a> localizados dentro dos cards. */
+.card a {
+    color: #005f73; /* Define a cor do link. */
+    font-weight: bold; /* Deixa o texto do link em negrito. */
+}
+
+/* Seleciona listas <ul> dentro dos cards. */
+.card ul {
+    margin: 0; /* Remove a margem padrão da lista. */
+    padding-left: 20px; /* Cria espaço à esquerda para os marcadores da lista. */
+}
+
+/* Seleciona cada item <li> das listas dentro dos cards. */
+.card li {
+    margin: 8px 0; /* Adiciona espaço vertical entre os itens da lista. */
+}
+
+/* Estilo utilizado para uma mensagem ou aviso de destaque. */
+.aviso {
+    margin-top: 24px; /* Cria espaço acima do aviso. */
+    padding: 14px; /* Cria espaço interno. */
+    background: #fff3cd; /* Define um fundo amarelo-claro. */
+    border-radius: 8px; /* Arredonda os cantos do aviso. */
+}
